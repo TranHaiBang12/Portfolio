@@ -124,36 +124,37 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 w-1/2 flex justify-center mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 w-full flex justify-center mx-auto">
           {socialLinks.map((link, index) => (
             <Card
-            key={index}
-            className="card-hover"
-            style={{
-              animationDelay: `${index * 150 + 200}ms`,
-              opacity: 0,
-              animation: isVisible ? "fadeInUp 0.5s ease forwards" : "none",
-            }}
-          >
-            <span className="border-line border-top"></span>
-            <span className="border-line border-bottom"></span>
-            <span className="border-line border-right"></span>
-            <span className="border-line border-left"></span>
-          
-            <CardContent className="pt-6 cursor-pointer relative z-10 rounded-xl">
-              <div className="flex items-center gap-2 justify-center">
-                <div>{link.icon}</div>
-                <h3 className="text-xl font-semibold">{link.name}</h3>
-              </div>
-              <div className="flex justify-center text-blue-600 items-center gap-2 mt-2">
-                <Link href={link.link} target="_blank" rel="noopener noreferrer">{link.detail}</Link>
-              </div>
-            </CardContent>
-          </Card>
-          
+              key={index}
+              className="card-hover w-full max-w-xs"  // Đảm bảo Card có chiều rộng linh hoạt
+              style={{
+                animationDelay: `${index * 150 + 200}ms`,
+                opacity: 0,
+                animation: isVisible ? "fadeInUp 0.5s ease forwards" : "none",
+              }}
+            >
+              <span className="border-line border-top"></span>
+              <span className="border-line border-bottom"></span>
+              <span className="border-line border-right"></span>
+              <span className="border-line border-left"></span>
 
+              <CardContent className="pt-6 cursor-pointer relative z-10 rounded-xl">
+                <div className="flex items-center gap-2 justify-center">
+                  <div>{link.icon}</div>
+                  <h3 className="text-xl font-semibold">{link.name}</h3>
+                </div>
+                <div className="flex justify-center text-blue-600 items-center gap-2 mt-2">
+                  <Link href={link.link} target="_blank" rel="noopener noreferrer" className="truncate">
+                    {link.detail}
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
+
       </div>
     </section>
   )
