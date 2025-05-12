@@ -124,7 +124,7 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 w-full flex justify-center mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 w-1/2 flex justify-center mx-auto">
           {socialLinks.map((link, index) => (
             <Card
               key={index}
