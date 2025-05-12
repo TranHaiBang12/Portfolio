@@ -69,14 +69,14 @@ export function Education() {
                 <div className="timeline-dot"></div>
                 <div className="mb-1 text-sm text-muted-foreground">{item.year}</div>
                 <Card className="card-hover border-none shadow-none bg-transparent">
-                  <CardHeader className="p-0 pb-2">
+                  <CardHeader className="p-0 pb-2 mb-2 ml-2 mr-2 mt-2">
                     <CardTitle className="text-xl flex items-center gap-2">
                       <GraduationCap className="h-5 w-5 text-primary" />
                       {item.degree}
                     </CardTitle>
                     <CardDescription className="text-base">{item.institution}</CardDescription>
                   </CardHeader>
-                  <CardContent className="p-0">
+                  <CardContent className="p-0 mb-2 ml-2 mr-2 mt-2" >
                     <p className="text-sm text-muted-foreground mb-2">{item.description}</p>
                     <div className="flex flex-wrap gap-2 mt-2">
                       {item.achievements.map((achievement, i) => (

@@ -70,7 +70,7 @@ export function Experience() {
                 <div className="timeline-dot"></div>
                 <div className="mb-1 text-sm text-muted-foreground">{item.period}</div>
                 <Card className="card-hover border-none shadow-none bg-transparent">
-                  <CardHeader className="p-0 pb-2">
+                  <CardHeader className="p-0 pb-2 mb-2 ml-2 mr-2 mt-2">
                     <CardTitle className="text-xl flex items-center gap-2">
                       <Briefcase className="h-5 w-5 text-primary" />
                       {item.position}
@@ -79,7 +79,7 @@ export function Experience() {
                       {item.company} • {item.location}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="p-0">
+                  <CardContent className="p-0 mb-2 ml-2 mr-2 mt-2">
                     <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
                       {item.description.map((des, i) => (
                         <li key={i}>{des}</li>
