@@ -92,7 +92,7 @@ export function Contact() {
       icon: <Mail className="h-5 w-5" />,
       name: "Gmail",
       detail: "bangth.work@gmail.com",
-      link: "#",
+      link: "mailto:bangth.work@gmail.com",
     },
     {
       icon: <Github className="h-5 w-5" />,
@@ -146,9 +146,9 @@ export function Contact() {
                   <h3 className="text-xl font-semibold">{link.name}</h3>
                 </div>
                 <div className="flex justify-center text-blue-600 items-center gap-2 mt-2">
-                  <Link href={link.link} target="_blank" rel="noopener noreferrer" className="truncate">
+                  <a href={link.link} target="_blank" rel="noopener noreferrer" className="truncate">
                     {link.detail}
-                  </Link>
+                  </a>
                 </div>
               </CardContent>
             </Card>

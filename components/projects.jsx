@@ -10,6 +10,17 @@ import Image from "next/image"
 
 const projects = [
   {
+    title: "Kodeholik",
+    description: [
+      "I participated in this project as a back-end developer/team leader in a team of five members",
+      "This project was developed as part of my final thesis for graduation - a website that allows users to develop their programming skills online by solving coding problems, taking courses, and participating in tests",
+    ],
+    image: "/kodeholik.png",
+    tags: ["React", "Tailwind CSS", "Spring Boot", "PostgreSQL", "REST API", "WebSocket", "JWT", "Redis", "Elasticsearch", "Docker", "AWS S3", "AWS EC2", "AWS Lambda", "AWS CloudFront"],
+    liveUrl: "https://youtu.be/i4gZZnN6e3M",
+    githubUrl: "https://github.com/TranHaiBang12/Kodeholik-Backend",
+  },
+  {
     title: "Car Rental",
     description: [
       "I participated in this project as a back-end developer/team leader in a team of five members",
@@ -30,17 +41,6 @@ const projects = [
     tags: ["React", "Tailwind CSS", "ASP.NET", "SQL Server", "REST API", "JWT", "HereMap"],
     liveUrl: "https://youtu.be/8KhRUxmED9w",
     githubUrl: "https://github.com/TranHaiBang12/NearMeProject",
-  },
-  {
-    title: "Kodeholik",
-    description: [
-      "I participated in this project as a back-end developer/team leader in a team of five members",
-      "This project was developed as part of my final thesis for graduation - a website that allows users to develop their programming skills online by solving coding problems, taking courses, and participating in tests",
-    ],
-    image: "/kodeholik.png",
-    tags: ["React", "Tailwind CSS", "Spring Boot", "PostgreSQL", "REST API", "WebSocket", "JWT", "Redis", "Elasticsearch", "Docker", "AWS S3", "AWS EC2", "AWS Lambda", "AWS CloudFront"],
-    liveUrl: "https://youtu.be/i4gZZnN6e3M",
-    githubUrl: "https://github.com/TranHaiBang12/Kodeholik-Backend",
   }
 ]
 

@@ -160,6 +160,67 @@
   z-index: 0;
 }
 
+body.prevent-scroll {
+  overflow: hidden;
+}
+
+body.prevent-scroll-shift {
+  /* This will be set dynamically via JS */
+}
+
+/* Header responsive fixes */
+.fixed-header {
+  /* Ensure the header stays in place when modal is open */
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+}
+
+/* Improved header responsiveness for landscape mode */
+@media (max-height: 500px) and (orientation: landscape) {
+  .fixed-header {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* Make nav links smaller in landscape mode */
+  .nav-link {
+    @apply text-xs !important;
+    padding: 0.25rem 0.5rem !important;
+    white-space: nowrap;
+  }
+
+  /* Prevent "About Me" from breaking into two lines */
+  .nav-link span {
+    white-space: nowrap;
+  }
+
+  /* Make header more compact */
+  .header-container {
+    @apply py-1 !important;
+  }
+
+  /* Adjust logo/brand size */
+  .header-logo {
+    @apply text-sm !important;
+  }
+
+  /* Create scrollable header if needed */
+  .header-nav {
+    overflow-x: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 0.25rem;
+  }
+
+  /* Hide scrollbar */
+  .header-nav::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 /* Horizontal lines (top & bottom) */
 .card-hover .border-top,
 .card-hover .border-bottom {
@@ -208,8 +269,6 @@
 .card-hover:hover .border-right {
   height: 100%;
 }
-
-
 
 .animate-fade-in {
   animation: fadeIn 0.5s ease forwards;
@@ -275,10 +334,14 @@
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
-
 
 .section-title {
   @apply text-3xl font-bold mb-8 relative inline-block;
